@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 Assignment</title>
+</head>
+<body>
+    <h1>Student admission form</h1>
+    
+    <form>
+        <label>Name</label>
+        <input type="text" name="fullname" placeholder="Sri"  required /><br />
+        <br/>
+
+        <label>age</label>
+        <input type="number" name="age" min="10" max="60" required /><br /><br />
+
+        <label>DOB:</label>
+        <input type="date" name="dob" required />
+        <br />
+        <br />
+        <label>Phone number:</label>
+        <input type="date" name="number" placeholder="13546789965"/>
+        <br />
+        <br />
+        
+        <label>Upload photo</label>
+        <input type="file" name="photo" accept="image/*" required />
+        <br />
+        <br />
+        <label>Upload Birth certificates:</label>
+        <input type="file" name="certificates" accept="jpg,.pdf,jpn,." multiple/>
+        <br />
+        <br />
+        
+        <label>Gender:</label>
+        <select name="Gender" required>
+         <option value="">select gender</option>
+         <option>male</option>
+         <option>female</option>
+         <option>other</option>
+
+        </select>
+        <br />
+        <br />
+        <label>Blood group:</label>
+        <select name="bloodgroup" required>
+            <option value="">select bloodgroup</option>
+            <option valaue="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+             <option value="AB+">AB+</option>
+             <option value="AB-">AB-</option>
+        </select>
+        <br />
+        <br />
+        <label>Nationality</label>
+        <select name="Nationality" required>
+            <option value="">Nationality</option>
+            <option value="Inidan">Indian</option>
+            <option value="London">London</option>
+            <option value="Malaysia">Malaysia</option>
+        </select>
+        <br />
+        <br />
+        
+        <label>Parent/Guardian:</label>
+        <input type="checkbox" name="Guardian" value="father"/>father
+        <input type="checkbox" name="Guardian" value="Mother"/>Mother
+        <input type="checkbox" name="Guardian" value="Guardian"/>Guardian
+        <br />
+        <br />
+        
+        <label>Occupation:</label>
+        <input type="text" name="Occupation" placeholder="Occupation">
+        <br />
+        <br />
+        <label>Religion:</label>
+        <input type="text" name="Religion" placeholder="Religion">
+        <br />
+        <br />
+        <label>Extra-curricular activities:</label>
+        <input type="text" name="Extra-curricular" placeholder="Drawing">
+        <br />
+        <br />
+
+        <input type="reset" value="reset form" />
+        <input type="submit" value="submit form" />
+    </form>
+    
+</body>
+</html>
