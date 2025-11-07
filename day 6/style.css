@@ -1,0 +1,27 @@
+<!--External css-->
+
+h1{
+    background-color: red;
+    color: hotpink;
+    font-family: fantasy;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+
+#red{
+    color: red;
+}
+#orange{
+    color: orange;
+}
+#pink{
+    color: pink;
+}
+
