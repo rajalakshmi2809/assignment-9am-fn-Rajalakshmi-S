@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+        .product-card{
+            background: rebeccapurple;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        .product-card img{
+            width: 100px;
+            height: 200px;
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Product grid Using</h1>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="watch.jpg" alt="" />
+            <h2>product-card 1</h2>
+            <p>RS.500</p>
+        </div>
+        <div class="product-card">
+            <img src="watch.jpg" alt="" />
+            <h2>product-card 2</h2>
+            <p>RS.500</p>
+        </div>
+        <div class="product-card">
+            <img src="watch.jpg" alt="" />
+            <h2>product-card 3</h2>
+            <p>RS.500</p>
+        </div>
+        <div class="product-card">
+            <img src="watch.jpg" alt="" />
+            <h2>product-card 4</h2>
+            <p>RS.500</p>
+        </div>
+        <div class="product-card">
+            <img src="watch.jpg" alt="" />
+            <h2>product-card 5</h2>
+            <p>RS.500</p>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

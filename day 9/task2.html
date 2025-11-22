@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: blue;
+           
+            height: 200px;
+        }
+        .right{
+            float: right;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+        .container::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="right"><img src="down.jpg.jpg" alt="" width="200px"  /></div>
+        <div class="small">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, inventore. Nisi ea soluta nihil inventore
+                odit saepe sunt optio modi est adipisci? Nihil, quod? Quasi laboriosam repudiandae fuga explicabo
+                dolorem, nisi tenetur dicta fugiat recusandae. Omnis molestias harum fugit impedit!
+            </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis asperiores eos autem cupiditate quo
+                fugiat tempore, vitae fugit, esse vero sint reprehenderit quia atque maiores voluptates sequi illo
+                provident ipsam? Alias corporis incidunt temporibus est? Saepe voluptatibus quod voluptate et!</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
