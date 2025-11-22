@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr;
+            grid-template-areas: 
+            "header header"
+            "sidebar content";
+            gap: 10px;
+        }
+        .header{
+            grid-area: header;
+            background: pink;
+            padding: 20px;
+        }
+        .sidebar{
+             grid-area: sidebar;
+            background: blue;
+            padding: 20px;
+        }
+        .content{
+             grid-area: content;
+            background: green;
+            padding: 20px;
+        }
+        .bar{
+             display: flex;
+             justify-content: space-between;
+             background: pink;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .cards{
+            display: flex;
+            gap: 10px;
+        }
+        .card{
+            flex: 1;
+            background: orange;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">header</header>
+        <aside class="sidebar">sidebar</aside>
+        <section class="content">
+            <div class="bar">
+                <p>dashboard</p>
+                <button>Button</button>
+            </div>
+
+            <div class="cards">
+                <div class="card">card 1</div>
+                <div class="card">card 2</div>
+                <div class="card">card 3</div>
+            </div>
+
+        </section>
+    </div>
+    
+</body>
+</html>

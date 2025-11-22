@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+
+            background-color: aqua;
+            height: 500px;
+            border: 3px solid black;
+        }
+        .left{
+            float: left;
+            margin-left: 15px;
+
+
+        }
+    
+        
+        .Right{
+            float: right;
+            margin-right: 15px;
+        }
+        .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Left"><img src="download.jpg" alt="left image"  width="200px" height="200px"/>
+        </div>
+        <div class="Right"><img src="down.jpg.jpg" alt="right image" width="200px"  height="200px"/>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, cum. Repellat tempore delectus laboriosam
+            assumenda ipsam voluptas, doloremque facere ipsa ad in quis velit facilis debitis explicabo. Quisquam
+            numquam est dolor necessitatibus adipisci accusantium vitae reprehenderit beatae. Fugiat molestias,
+            reprehenderit velit repudiandae sed, ducimus voluptatum ipsa maxime, explicabo iste necessitatibus eum
+            perspiciatis beatae. Delectus, est architecto, natus corporis itaque doloribus placeat illum minima soluta
+            officiis assumenda quo perspiciatis asperiores eligendi aperiam consectetur eius esse cum aliquam ducimus,
+            nobis quaerat rem!</p>
+    </div>
+
+</body>
+
+</html>

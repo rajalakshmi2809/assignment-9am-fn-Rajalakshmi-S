@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "sidebar content"
+            "footer footer";
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+        }
+        .header{
+            grid-area: header;
+            background: teal;
+            color: black;
+            padding: 20px;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background: red;
+            color: black;
+            padding: 20px;
+        }
+        .content{
+            grid-area: content;
+            padding: 20px;
+            display: grid;
+            gap: 1.5rem;
+            background: green;
+            
+        }
+
+        .footer{
+          grid-area: footer;
+          background: rebeccapurple;
+          color: black;
+          text-align: center;
+          padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1> my portfolio</h1>
+        </header>
+        <nav class="sidebar">
+            <a href="#">about</a>
+            <a href="#">projects</a>
+            <a href="#">skills</a>
+            <a href="#">contact</a>
+            </nav>
+            <main class="content">
+                <section class="project-card">p1</section>
+                <section class="project-card">p2</section>
+                <section class="project-card">p3</section>
+            </main>
+        <footer class="footer">
+            <p>@ 2025 Raj</p>
+    
+
+        </footer>
+    </div>
+    
+</body>
+</html>
