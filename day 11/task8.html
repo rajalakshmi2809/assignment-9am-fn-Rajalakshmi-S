@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+        .dashboard{
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+            grid-template-columns: 200px 1fr 1fr;
+            grid-template-rows: 70px 120px 1fr 200px 50px;
+            grid-template-areas: 
+            "header header header"
+            "sidebar topbar topbar"
+            "sidebar cards  card"
+            "sidebar table table"
+            "footer footer footer";
+        }
+        .header{
+            column-gap: 1 / 2;
+            grid-area: header;
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: blue;
+            padding: 20px;
+            border-radius: 8px;
+            height: 150px;
+        }
+        .sidebar nav{
+      display: flex;
+      gap: 15px;
+        }
+        .sidebar a{
+            color:aqua;
+            padding: 10px;
+            font-size: large;
+        }
+        .sidebar a:hover{
+            color:blue;
+        }
+        .topbar{
+            grid-area: topbar;
+            background: green;
+            padding: 20px;
+            border-radius: 8px;
+            gap: 15px;
+        }
+        .topbar input{
+            flex: 1;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 8px;
+            gap: 15px;
+        }
+        .cards{
+            grid-area: cards;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+
+        }
+        .card{
+          background: red;padding: 20px;
+          border-radius: 8px;
+
+        }
+        .footer{
+            flex: 1;
+         grid-area: footer;
+         background: blue;
+         text-align: center;  
+         padding: 20px;
+         color: brown; 
+        }
+    
+    
+    </style>
+    </head>
+
+
+ <body>
+    <div class="dashboard">
+        <header class="header">
+            <h3>Dashboard</h3>
+        </header>
+        <aside class="sidebar">
+            <nav>
+            
+            <a href="#">Home</nav>
+            <a href="#">About</nav>
+            <a href="#">Service</nav>
+            <a href="#">Contact</nav>
+        
+            </nav>
+        </aside>
+        <div class="topbar">
+            <input type="text" placeholder="search" />
+            <button>profile</button>
+        </div>
+        <section class="cards">
+            <div class="card">Game 1</div>
+            <div class="card">Game 2</div>
+            <div class="card">Game 3</div>
+            
+        </section>
+        <section class="table">Table section</section>
+        <footer class="footer">@ 2026 TVK</footer>
+    </div>
+    
+</body>
+</html>

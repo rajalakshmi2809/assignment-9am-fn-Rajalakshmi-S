@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        .container{
+             background-color: black;
+             display: grid;
+             grid-template-areas: 
+             "header"
+             "main"
+             "footer";
+             height: 50vh;
+             gap: 15px;
+        }
+        .header{
+            grid-area: header;
+            display: grid;
+            background: red;
+            color: black;
+            text-align: center;
+            font-size: large;
+        }
+        .main{
+            grid-area: main;
+            display: flex;
+            background: red;
+            color: black;
+            text-align: center;
+            font-size: large;
+        }
+        .footer{
+            grid-area: footer;
+            display: grid;
+            background: red;
+            color: black;
+            text-align: center;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid areas header,main and footer is a simple layout</h1>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="main">Main content</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

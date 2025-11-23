@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+        }
+        .blog-container{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 80px 1fr;
+            grid-template-areas: 
+            "header header"
+            "posts sidebar";
+        }
+        .header{
+            grid-area: header;
+            background: green;
+            padding: 20px;
+            border-radius: 8px;
+            display: grid;
+
+        }
+        .posts{
+            grid-area: posts;
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 1fr 1fr;
+        }
+        .post{
+            background: red;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+
+        }
+        .sidebar{
+      grid-area: sidebar;
+      background: blue;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .sidebar ul{
+        padding-left: 18px;
+        
+    }
+
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <header class="header"><b>My blog</b></header>
+        <main class="posts">
+            <article class="post">post 1</article>
+            <article class="post">post 2</article>
+            <article class="post">post 3</article>
+            <article class="post">post 4</article>
+        </main>
+        <aside class="sidebar">
+            <h2>Veg Shop</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h3>categories</h3>
+            <ul>
+                <li>Tomato</li>
+                <li>Onion</li>
+                <li>Brinjal</li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
