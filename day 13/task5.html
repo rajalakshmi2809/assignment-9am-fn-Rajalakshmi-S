@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            background: red;
+            color: black;
+            padding: 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: large;
+            font-weight: 600;
+            transition: background-color 0.3s ease,
+            transform 0.2s ease,box-shadow 0.3s ease;
+            
+        }
+        .button:hover{
+            background-color: blueviolet;
+            transform: translateY(-3px);
+            box-shadow: 30px black;
+        }
+        .button:focus{
+            transform: translateY(-3px);
+            box-shadow: 4px green;
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Hover me</button>
+    
+</body>
+</html>
