@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+    color: black;
+}
+header{
+    color: red;
+    background-color: green;
+    text-align: center;
+    padding: 20px;
+}
+nav{
+    margin-top: 10px;
+
+}
+nav a{
+    color: blueviolet;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover{
+    text-decoration: underline;
+}
+.intro,paragraphs{
+  padding: 30px;
+  text-align: center;
+}
+.p-box{
+   background-color: gold;
+   margin: 15px auto;
+   padding: 15px;
+
+}
+.p-box h3{
+    color: green;
+    margin-bottom: 8px;
+}
+footer{
+    background: blueviolet;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
