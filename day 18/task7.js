@@ -1,0 +1,19 @@
+let a = 10;
+let b = 5;
+let sum = a + b;
+let subtraction = a - b;
+let product = a * b;
+let quotient = a / b;
+let intermediate1 = sum * 2; // (a + b) * 2
+let intermediate2 = intermediate1 - product; // previous result - (a * b)
+let result = intermediate2 +  quotient;
+
+console.log("a =", a);
+console.log("b =", b);
+console.log("sum =", sum);
+console.log("subtraction =", subtraction);
+console.log("product =", product);
+console.log("quotient =", quotient);
+console.log("intermediate1 =", intermediate1);
+console.log("intermeidate2 =", intermediate2);
+console.log("result =", result);

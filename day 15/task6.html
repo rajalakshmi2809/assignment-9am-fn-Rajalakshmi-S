@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+            
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(5,minmax(200px,1fr));
+            gap: 20px;
+            
+        }
+        .gallery img{
+            width: 100%;
+            height: 200%;
+            border-radius: 8px;
+
+        }
+    </style>
+</head>
+<body>
+   <h1>Photos</h1>
+   <div class="gallery">
+    <img src="down.jpg.jpg" class="img-fluid rounded gallery-img" alt="">
+    <img src="down.jpg.jpg" class="img-fluid rounded gallery-img" alt="">
+    <img src="down.jpg.jpg" class="img-fluid rounded gallery-img" alt="">
+    <img src="down.jpg.jpg" class="img-fluid rounded gallery-img" alt="">
+    <img src="down.jpg.jpg" class="img-fluid rounded gallery-img" alt="">
+   </div> 
+
+
+</body>
+
+
+</html>

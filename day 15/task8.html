@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        
+        .container{
+          width:100%;
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 40px 0;
+        }
+        .features .card{
+            padding: 20px;
+            border: 2px solid green ;
+            border-radius: 10px;
+            gap: 15px;
+        }
+        .grid-3{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .gap{
+            gap: 25px;
+        }
+        .footer{
+            border-top: 1px solid green;
+            padding: 20px;
+            margin-top: 40px;
+
+        }
+        .text-center{
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <heading>
+    <div class="container">
+      <h1>Welcome to our website</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sunt
+        dignissimos earum aut fuga accusamus, maiores, ullam impedit eos,
+        numquam provident illum architecto ipsum. Nobis nisi doloribus
+        reiciendis consequuntur asperiores. Impedit quae beatae rem unde, facere
+        consequatur ipsam? Soluta, labore.
+      </p>
+      </heading>
+      <main class="container features grid gap">
+        <div class="card">
+            <h3>Features one</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="card">
+            <h3>Feautre two</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="card">
+            <h3>Feature three</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+      </main>
+      <footer>
+        <div class="container text-center">
+            <p>@ 2025 Yor company.all rights reserved</p>
+        </div>
+      </footer>
+
+      
+
+    </div>
+  </body>
+</html>
