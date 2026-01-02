@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover -Menu</title>
+
+    <style>
+    .menu {
+        position: relative;
+        display: inline-block;
+    }
+
+    .menu-btn {
+        background-color: green;
+        color: black;
+        padding: 12px 16px;
+        cursor: pointer;
+    }
+
+    .menu-content {
+        display: none;
+        position: absolute;
+        background-color: red;
+        min-width: 160px;
+    }
+
+    .menu-content a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: blue;
+    }
+
+    .menu-content a:hover {
+        background-color: aqua;
+    }
+
+    .menu:hover .menu-content {
+        display: block;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-btn">Menu</div>
+        <div class="menu-content">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</body>
+</html>

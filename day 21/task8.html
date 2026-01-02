@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password retry</title>
+</head>
+<body>
+    <h2>Password Validation</h2>
+    <button onclick="checkPassword()">Enter password</button>
+    <script>
+        function checkPassword() {
+            let correctPassword = "RAJ";
+            let userPassword;
+
+            do {
+                userPassword = prompt("Enter your password:");
+            }while (userPassword !== correctPassword);
+
+            alert("password correct! access granted");
+
+            
+        }
+    </script>
+    
+</body>
+</html>

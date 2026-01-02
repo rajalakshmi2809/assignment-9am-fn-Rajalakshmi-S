@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance checker</title>
+</head>
+<body>
+<h2>Student Attendance</h2>
+<button onclick="checkAttendance()">Check Attendance</button>
+<ul id="attendanceList"></ul>
+
+<script>
+  function checkAttendance() {
+    let students = {
+      Ram: true,
+      Sita: false,
+      Arjun: true,
+      Kiran: false
+    };
+
+    let list = "";
+
+    for (let name in students) {
+      if (students[name]) {
+        list += "<li>" + name + " : Present</li>";
+      } else {
+        list += "<li>" + name + " : Absent</li>";
+      }
+    }
+
+    document.getElementById("attendanceList").innerHTML = list;
+  }
+</script>
+</body>
+</html>

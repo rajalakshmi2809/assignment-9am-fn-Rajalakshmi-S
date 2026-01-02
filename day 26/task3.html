@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h3>Dynamic List</h3>
+   <ul id="myList"></ul> 
+
+   <script>
+    const items = ["Item 1", "Item 2", "Item 3", ];
+
+    const list = document.getElementById("myList");
+    items.forEach(item => { cons
+        
+        t li =
+        document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+    });
+   </script>
+</body>
+</html>

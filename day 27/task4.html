@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> stop form reload</h3>
+    <form id="myform"> 
+        <input type="text" placeholder="type something.." required>
+        <button type="submit"> submit</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        const form = document.getElementById("myform");
+        const output = document.getElementById("output");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const inputValue = form.querySelector("input").value;
+            output.textContent = " Hello sam:" + inputValue;
+            form.reset();
+        });
+    </script>
+</body>
+</html>

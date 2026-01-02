@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+
+        }
+        .error {
+            color:black;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form onsubmit="return validateForm()">
+        <label>Username:</label><br>
+        <input type="text" id="username"><br>
+        <span id="userError" class="error"></span>
+        <br>
+        <br>
+        <label>password:</label>,<br>
+        <input type="password" id="password"><br>
+        <span id="passError" class="error"></span>
+        <br>
+        <br>
+        <button type="submit">Login</button>
+
+    </form>
+
+
+    <script>
+
+        function validateForm() {
+            let username = document.getElementById("username").value;
+            let passwordd = document.getElementById("password").value;
+
+            let isValid = true;
+
+            document.getElementById("userError").textContent = "";
+
+
+            document.getElementById("passError").textContent = "";
+
+            if (username === "") {
+                  document.getElementById("userError").textContent = "username ir required";
+
+            
+            isValid = false;
+        }
+
+        if (passwordd.length <6) {
+            document.getElementById("passError").textContent = "password must be at least 6 character";
+            isValid = false;
+        }
+        return isValid;
+
+        }
+    </script>
+</body>
+</html>

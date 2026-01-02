@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log keyboard input</title>
+</head>
+<body>
+    <h3> type something in your keyboard and check the console:</h3>
+    <p id="output">Pressed key will appear here.</p>
+    <script>
+        document.addEventListener("keydown", function(event) {
+            document.getElementById("output").textContent = "key pressed:" + event.key;
+        });
+    </script>
+</body>
+</html>
