@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Click tracker app</h2>
+    <p> Total Clicks: <strong id="count">0</strong></p>
+    <button onclick="trackClick()">Click Me</button>
+
+    <button onclick="resetCount()">Reset</button>
+
+    <script>
+        let clickCount = 0;
+        function trackClick() {
+            clickCount++;
+            document.getElementById("count").textContent = clickCount;
+        }
+
+        function resetCount() {
+            clickCount = 0;
+
+            document.getElementById("count").textContent = clickCount;
+        }
+    </script>
+</body>
+</html>
