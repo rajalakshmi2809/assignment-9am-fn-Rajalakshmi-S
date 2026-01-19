@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h3> 1. What is asynchronous JavaScript? Why is it needed?</h3> 
+  <p> Asynchronous JavaScript allows your program to start a task that takes
+      time (like fetching data from a server) and continue running other 
+      code without waiting waiting for that task to finish.
+     
+      instead of blocking the execution, JavaScript handles long-running tasks
+      in the background and executes a callback, promise, or async/await 
+      when the task is completed.
+    
+  </p>
+      <h4> why is Asynchronous JavaScript Needed ?</h4>
+      <p> JavaScript is single-threaded, meaning it can do only one task at a time.
+          without async behavior:
+
+          <ul>
+            <li>web pages would freeze</li>
+            <li>User interactions would stop</li>
+            <li>APIs would block the UI</li>
+          </ul>
+      </p>
+      <hr><hr>
+      <h3>2. Explain callback functions with a real-life example.</h3>
+      <p>A callback function is a function that is passed as an argument to another function
+        and is called later, usually after some task is completed.
+        <h4>Example:</h4>
+        
+           <p> function orderFood(food, callback) {
+           console.log("Order placed for", food);
+
+            setTimeout(() => {
+           console.log(food, "is ready");
+           callback(); // calling back
+           }, 2000);
+          }
+
+          function eatFood() {
+          console.log("Eating food 😋");
+          }
+
+          orderFood("Burger", eatFood);</p>
+       </p>
+       <hr><hr>
+
+       <h3>3.What is callback hell? Why is it a problem? </h3>
+       <p>Callback hell happens when you have many nested callback functions,
+        especially in asynchronous code, making the code hard to read, understand, and maintain.</p>
+        <p>It is often called:</p>
+         <ul>
+            <li>Pyramid of Doom</li>
+            <li>Nested callbacks problem</li>
+         </ul>
+         <h4>Problem:</h4>
+         <h4>Poor readability</h4>
+         <ul>
+            <li>Hard to understand logic flow</li>
+            <li>Deep nesting hurts clarity</li>
+         </ul>
+
+         <h4>Difficult Maintenance</h4>
+         <ul>
+            <li>Small changes require editing multiple levels</li>
+            <li>Easy to introduce bugs</li>
+         </ul>
+         <h4>Hard to debug</h4>
+         <ul>
+            <li>Stack traces are confusing</li>
+            <li>Finding bugs takes more time</li>
+         </ul>
+         <hr><hr>
+         <h3>4. Define a Promise and explain its states.</h3>
+         <p>A promise is an object that represents the eventual result of an 
+            asynchronous operation. It acts as a placeholder for a value that 
+            will be available now, late, or never.
+         </p>
+         <h4>Promise states</h4>
+         <p> A promise can be in one of three states </p>
+         <ul>
+            <li>Pending</li>
+            <ul>
+                <li>Initial state</li>
+                <li>Operations is still in progress</li>
+                <li>Neither fulfilled nor rejected</li>
+            </ul>
+            <li>fulfilled(Resolve)</li>
+            <ul>
+                <li>Operation completed successfully</li>
+                <li>resolve(value) is called</li>
+                <li>Promise returns a result</li>
+            </ul>
+            <li>Rejected</li>
+            <ul>
+                <li>operation failed</li>
+                <li>reject(error) is called</li>
+                <li>promise returns a error</li>
+            </ul>
+         </ul>
+         <hr><hr>
+         <h3>5. Difference between callbacks and promises.</h3>
+         <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>callback</th>
+            <th>Promise</th>
+        </tr>
+        <tr>
+            <td>a function passed as an argument</td>
+            <td>An object representir future result</td>
+        </tr>
+        <tr>
+            <td>Executed after task completion</td>
+            <td>Producers a value late (resolve,reject)</td>
+        </tr>
+        <tr>
+            <td>old approach</td>
+            <td>Modern approach</td>
+        </tr>
+    </table>
+    <hr><hr>
+
+    <h3>6. Why is async/await preferred over .then()?</h3>
+    <P>async/await is preferred over .then() because
+       it makes asynchronous code easier to read, write, and maintain, especially
+       as logic grows more complex.</P>
+       <hr><hr>
+
+       <h3>7. Can await be used without  async why?</h3>
+       <p>
+         await pauses execution until a Promise resolves or rejects
+         JavaScript only allows this “pause” inside an async function
+         An async function tells JavaScript:
+         “This function will handle asynchrono5us operations and return a Promise”
+         So await depends on async to work properly.</p>
+
+         <hr><hr>
+
+         <h3>8. What happens if a promise is rejected?</h3>
+         <p>when a promise is rejected, it means the asynchronous 
+            operation failed. What happens next depends on how you handle it.
+         </p>
+         <hr><hr>
+         <h3>9. Explain error handling in async/await</h3>
+         <p> In JavaScript, error handling in async /await is done </p>
+            using try..catch, just like synchronous code. A rejected promise inside 
+            an async function behaves like a thrown error.
+            <ul>
+                <li>Rejected promise = thrown error</li>
+                <li>Use try..catch to handle it</li>
+                <li>Cleaner than .then(). catch()</li>
+                <li> Makes async code look synchronous</li>
+            </ul>
+        </p>
+         <hr><hr>
+
+         <h3>Write one real-world use case for asynchronous javascript</h3>
+         <p>Asynchronous javascript allows the app to:</p>
+         <ul>
+            <li>send a request to the server</li>
+            <li>Not freeze the UI</li>
+            <li>continue responding to user actions</li>
+            <li>Display data when it arrives</li>
+            <li>synchronous code would block the page</li>
+            <li>async keeps the app fast and responsive</li>
+         </ul>   
+
+       
+
+</body>
+</html>

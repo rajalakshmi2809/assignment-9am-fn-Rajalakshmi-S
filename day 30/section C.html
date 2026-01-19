@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>1. How would you handle an API call that takes time to respond?</h3>
+    <p> Handling an API call that takes  time to respond means using asynchronous
+        programming techniques to request data from a server without blocking the 
+        application, while properly managing loading states, success,  and 
+        errors.
+
+        <p>This ensures that the application remains responsive,provides user feedback 
+            (like loading indicators), and handles delays or failures gracefully until
+            the API  responses is received.
+        </p>
+    </p>
+    <hr><hr>
+    <h3>2. Why should long tasks not block the main thread?</h3>
+    <p>Long tasks should not block the main thread because the 
+        main thread is responsible for handling the user interface, 
+        user interactions, and redering. If it is blocked, the 
+        application becomes unresponsive.
+    </p>
+    <p>The main thread runs: </p>
+    <ul>
+        <li>UI rendering</li>
+        <li>Button clicks</li>
+        <li>keyboard and mouse events</li>
+        <li>Screen updates</li>
+    </ul>
+
+    <p> When  a long task (like an API call, heavy computation, or file processing)
+        runs on the main thread.
+    </p>
+     
+    <ul>
+        <li>The UI freezes</li>
+        <li>Buttons stop responding</li>
+        <li> The app appears "Hung" or crashed</li>
+    </ul>
+    <hr><hr>
+
+    <h4>3.Which async method would you choose for a large application and why?</h4>
+    <p>1. Better readability & maintainability</p>
+    <ul>
+        <li>Code looks synchronous, so its easier to read and understand</li>
+        <li>large teams can maintain it without confusion</li>
+    </ul>
+    <p>2. Simpler error handling</p>
+    <ul>
+        <li>Uses try/catch, just like normal synchronous code.</li>
+        <li>Centralized and predictable error flow.</li>
+    </ul>
+    <p>3. Scales well as the app grows</p>
+    <ul>
+        <li>Large apps have:<ul>
+            <li>Multiple API calls</li>
+            <li>Complex workflows</li>
+            <li>Conditional async logic</li></ul>
+        </li>
+        <p>async/ await handles all of this cleanly without callback hell.</p>
+    </ul>
+
+    <p>4. Easier debugging</p>
+    <ul>
+        <li>Stack traces are clearer.</li>
+        <li>easier to set breakpoints and step through code.</li>
+    </ul>
+
+    <p>5. Works perfectly with modern frameworks</p>
+    <ul>
+        <li>React,Angular,vue,node.js all rely heavily async / await.</li>
+        <li>Industry standard for production-grade apps.</li>
+    </ul>
+    <hr><hr>
+    <h3>4. How do promises improve readability?</h3>
+    
+    <p>Promises improve readability by making asynchronous JavaScript code clearer, 
+        more structured, and easier to follow compared to callbacks.</p>
+    <p>Explanation :</p>
+   <h4>1. Avoids callback hell</h4>
+   <p>Without promises, async code often becomes deeply nested, making it hard to read and understand. 
+    Promises flatten this structure, so code flows in a cleaner way.</p>
+   <h4>2. Clear, linear flow</h4>
+    <p>Using .then() allows asynchronous steps to be written in sequence, 
+        which reads from top to bottom like normal code.</p>
+   <h4>3. Separation of concerns</h4>
+   <p>Promises clearly separate:<p>
+    <ul>
+        <li>success handling using .then()</li>
+     <li>error handling using .catch()
+         This makes the logic easier to understand at a glance.</li>
+    </ul>     
+   <h4>4. Better chaining of async tasks</h4>
+   
+   <p>Each .then() handles one operation, improving modularity and readability.</p>
+   <h4>5. Consistent and predictable structure</h4>
+   <p>Promises follow a standard pattern (pending, fulfilled, rejected), 
+    so developers can quickly understand how the async flow works.</p>
+
+    <hr><hr>
+    <h3>5. How does async/await simplify debugging?</h3>
+    <p>Async/await simplifies debugging by providing clearer stack traces,
+     allowing the use of try/catch for error handling, enabling step-by-step debugging,
+     and eliminating callback nesting, making asynchronous code easier to trace and fix.</p>
+     <hr><hr>
+
+
+</body>
+</html>
