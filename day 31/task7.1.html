@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+</head>
+<body>
+
+  <h2>Welcome!</h2>
+  <p id="user"></p>
+
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    // Protect page
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "login.html";
+    }
+
+    document.getElementById("user").innerText =
+      "Hello, " + localStorage.getItem("username");
+
+    function logout() {
+      localStorage.clear(); // or removeItem
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart using Local Storage</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button { margin-left: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>Simple Cart</h2>
+
+  <button onclick="addToCart('Laptop', 50000)">Add Laptop</button>
+  <button onclick="addToCart('Phone', 20000)">Add Phone</button>
+  <button onclick="addToCart('Headphones', 3000)">Add Headphones</button>
+
+  <h3>Cart Items</h3>
+  <ul id="cart"></ul>
+
+  <script>
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    
+    displayCart();
+
+    function addToCart(name, price) {
+      const item = { name, price };
+
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      displayCart();
+    }
+
+    function displayCart() {
+      const cartList = document.getElementById("cart");
+      cartList.innerHTML = "";
+
+      if (cart.length === 0) {
+        cartList.innerHTML = "<li>Cart is empty</li>";
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - ₹${item.price}`;
+
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remove";
+        removeBtn.onclick = () => removeItem(index);
+
+        li.appendChild(removeBtn);
+        cartList.appendChild(li);
+      });
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      displayCart();
+    }
+  </script>
+
+</body>
+</html>

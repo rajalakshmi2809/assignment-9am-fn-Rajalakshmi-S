@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch API Error Handling</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .error {
+      color: red;
+    }
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Fetch API Error Handling</h2>
+
+  <button onclick="getData()">Fetch Data</button>
+  <p id="output"></p>
+
+  <script>
+    function getData() {
+      const output = document.getElementById("output");
+      output.textContent = "Loading...";
+
+      fetch("https://jsonplaceholder.typicode.com/posts/1")
+        .then(response => {
+          
+          if (!response.ok) {
+            throw new Error("HTTP Error: " + response.status);
+          }
+          return response.json();
+        })
+        .then(data => {
+          output.className = "success";
+          output.textContent = "Title: " + data.title;
+        })
+        .catch(error => {
+          output.className = "error";
+          output.textContent = "Error: " + error.message;
+        });
+    }
+  </script>
+
+</body>
+</html>
