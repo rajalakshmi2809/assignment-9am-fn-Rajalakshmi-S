@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function accepting unlimited arguments</title>
+</head>
+<body>
+    <h2>function accepting unlimited arguments using rest</h2>
+    <button id="btn">Calculate total</button>
+    <p id="output"></p>
+
+        <script>
+        const btn = document.getElementById("btn");
+        const output = document.getElementById("output");
+        function addNumbers(...numbers) {
+
+        let sum = 0;
+        for (let n of numbers) {
+            sum += n;
+        }
+        return sum;
+    }
+     btn.addEventListener("click", () => {
+        const result = addNumbers(7,8,9,4,6);
+        output.textContent ="Total = " + result;
+     });
+
+    </script>
+</body>
+</html>

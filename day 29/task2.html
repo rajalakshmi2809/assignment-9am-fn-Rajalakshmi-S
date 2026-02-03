@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+<body>
+    <h2> callback using setTimeout</h2>
+    <button onclick="startTask()">click me</button>
+
+    <script>
+        function showMessage() {
+            alert("Task completed after 2 seconds!");
+        }
+
+        function startTask() {
+            setTimeout(showMessage, 2000);
+
+        }
+    </script>
+
+
+</body>
+</html>

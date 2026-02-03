@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error finding Quiz</title>
+</head>
+<body>
+    <h2>Javascript Error finding Quiz</h2>
+    <p id="question">What is 5 + 5 </p>
+    <input type="number" id="answer">
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id ="result"></p>
+
+    <script>
+        function checkAnswer() {
+            let userAnswer =
+            document.getElementById("answr").value;
+            console.log("User Answer:", userAnswer);
+
+            if (userAnswer = 10) {
+                document.getElementById("resultt").innerHTML = "Correct!";
+            } else {
+                document.getElementById("result").innerHTML = "Wrong Answer";
+            }
+        }
+    </script>
+</body>
+</html>

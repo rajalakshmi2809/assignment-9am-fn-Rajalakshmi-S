@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> object to JSON</title>
+</head>
+<body>
+    <h2>Convert object to JSON</h2>
+    <button onclick="convertToJSON()">Convert</button>
+    <pre id="output"></pre>
+    <script>
+        function convertToJSON() {
+            const user = {
+                name: "Selva",
+                age: 22,
+                city: "Chennai",
+                skills: ["HTML", "CSS", "Javascript"]
+            };
+            const jsonData = JSON.stringify(user, null, 2);
+
+            document.getElementById("output").textContent = jsonData;
+        }
+    </script>
+</body>
+</html>

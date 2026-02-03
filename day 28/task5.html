@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> use console.log to debug</title>
+</head>
+<body>
+    <h2>Debug example</h2>
+
+    <script>
+        function add(a, b) {
+            console.log("a:", a);
+            console.log("b:", b);
+
+            //bug
+            return a - b;
+        }
+
+        console.log("Result:", add(10, 5));
+    </script>
+</body>
+</html>

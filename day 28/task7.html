@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form Validation</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form onsubmit="return validateLogin()">
+  <label>Username:</label>
+  <input type="text" id="user"><br><br>
+
+  <label>Password:</label>
+  <input type="password" id="pass"><br><br>
+
+  <button type="submit">Login</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+  function validateLogin() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("passwrd").value;
+
+    console.log("Username:", username);
+    console.log("Password:", password);
+
+    if (username = "") {
+      document.getElementById("msg").innerHTML = "Username is required";
+      return false;
+    }
+
+    if (password.length < 6) {
+      document.getElementById("msgg").innerHTML = "Password must be 6 characters";
+      return false;
+    }
+
+    document.getElementById("msg").innerHTML = "Login Successful";
+    return true;
+  }
+</script>
+
+</body>
+</html>

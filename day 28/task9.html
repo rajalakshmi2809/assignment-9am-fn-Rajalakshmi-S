@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Broken JS App</title>
+</head>
+<body>
+
+<h2>Counter App</h2>
+
+<p id="count">0</p>
+
+<button onclick="increase()">Increase</button>
+<button onclick="decrease()">Decrease</button>
+
+<script>
+  let counter = 0;
+
+  function increase() {
+    counter++;
+    document.getElementById("counts").innerHTML = counter;
+    console.log("Counter value:", counter);
+  }
+
+  function decrease() {
+    if (counter < 0) {
+      counter--;
+    }
+    document.getElementById("count").innerHTML = counter;
+  }
+
+  
+</script>
+
+</body>
+</html>

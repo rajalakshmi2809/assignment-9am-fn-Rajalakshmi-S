@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch User Data - Async/Await</title>
+</head>
+<body>
+
+  <h2>Fetch User Data using async/await</h2>
+  <button onclick="getUser()">Get User Data</button>
+  <p id="output"></p>
+
+  <script>
+    // Simulated API call
+    function fetchUserData() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const success = true; // change to false to test error
+
+          if (success) {
+            resolve({
+              id: 101,
+              name: "Selva",
+              email: "selva@example.com"
+            });
+          } else {
+            reject("Error: Unable to fetch user data");
+          }
+        }, 2000);
+      });
+    }
+
+    // Using async/await
+    async function getUser() {
+      const output = document.getElementById("output");
+      output.innerText = "Loading...";
+
+      try {
+        const user = await fetchUserData();
+        output.innerText = `
+       User ID: ${user.id}
+       Name: ${user.name}
+       Email: ${user.email}
+        `;
+      } catch (error) {
+        output.innerText = error;
+      }
+    }
+  </script>
+
+</body>
+</html>
