@@ -23,7 +23,7 @@
 
 
     .light {
-      background-color: black;
+      background-color: white;
       color: #000000;
     }
 
@@ -53,11 +53,11 @@
     
     const savedTheme = localStorage.getItem("theme");
 
-    if (savedTheme) {
-      document.body.className = savedTheme;
-    } else {
-      document.body.className = "light";
-    }
+    // if (savedTheme) {
+    //   document.body.className = savedTheme;
+    // } else {
+    //   document.body.className = "light";
+    // }
 
     function toggleTheme() {
       if (document.body.className === "light") {
