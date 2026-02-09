@@ -105,16 +105,59 @@
 // export default App;
 
 // Blogpost
-import BlogPost from "./BlogPost";
+// import BlogPost from "./BlogPost";
+
+// function App() {
+//   return (
+//     <div>
+//       <BlogPost />
+//     </div>
+//   );
+// }
+
+// export default App;
+// import Header from "./components/Header";
+// import Sidebar from "./components/Sidebar";
+// import Content from "./components/Content";
+
+// function App() {
+//   return (
+//     <div style={{ display: "flex", height: "100vh" }}>
+//       <Sidebar />
+
+//       <div style={{ flex: 1 }}>
+//         <Header />
+//         <Content />
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Content from "./components/Content";
 
 function App() {
   return (
-    <div>
-      <BlogPost />
+    <div style={{ display: "flex", height: "100vh" }}>
+      <Sidebar />
+      <div style={{ flex: 1 }}>
+        <Header />
+        <Content />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
 
 
